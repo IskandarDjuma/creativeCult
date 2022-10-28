@@ -1,0 +1,36 @@
+// Fonts
+$primary-text: "Golos", "Arial", sans-serif;
+
+// Color
+$basic-dark-blue: #003154;
+$basic-dark-blue-9: #174463;
+$basic-black: #000103;
+$basic-black-80: #1e1e1e;
+$basic-black-70: #404040;
+$basic-black-60: #888888;
+$basic-white: #ffffff;
+$basic-grey: #8f9090;
+$basic-grey70: #f7f7f8;
+$basic-grey50: #e1e1e1;
+$main-grey : #d0d0d0;
+$second-blue:#60c0c3;
+$light-blue: #f2f6fb;
+$transparent: rgba($basic-black, 0);
+
+$accent-color: $basic-dark-blue;
+$primary-text-color: $basic-black-80;
+$seconary-text-color: $basic-black-70;
+
+
+// Viewports
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+//Retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Transition
+$tl: 0.3s;

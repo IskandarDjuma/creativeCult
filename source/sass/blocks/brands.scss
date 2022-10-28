@@ -1,0 +1,113 @@
+.brands__wrap {
+  margin-bottom: 45px;
+
+  @include above($desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.brands__headline {
+  display: none;
+
+  @include above($desktop-width) {
+    display: block;
+    color: $accent-color;
+  }
+}
+
+.brands__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+
+  @include above ($desktop-width) {
+    flex-wrap: wrap;
+    gap: 50px 15px;
+  }
+}
+
+.brands__item {
+  position: relative;
+  flex: 1 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 288px;
+  border-left: 1px solid $basic-grey50;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 180px;
+    height: 48px;
+  }
+
+  &--polair {
+    &::before {
+      background: url("../img/icon/polar-logo.svg") no-repeat;
+    }
+  }
+
+  &--carboma {
+    &::before {
+      background: url("../img/icon/carboma-logo.svg") no-repeat;
+    }
+
+  }
+
+  &--dazzl {
+    &::before {
+      background: url("../img/icon/dazzl-logo.svg") no-repeat;
+    }
+
+  }
+
+  &--polair-plus {
+    &::before {
+      background: url("../img/icon/polair-logo.svg") no-repeat;
+    }
+
+  }
+
+  &--radax {
+    &::before {
+      background: url("../img/icon/radax-logo.svg") no-repeat;
+    }
+
+  }
+
+  &--frosteco {
+    &::before {
+      background: url("../img/icon/frosteco-logo.svg") no-repeat;
+    }
+
+  }
+
+  &--rada {
+    &::before {
+      background: url("../img/icon/rada-logo.svg") no-repeat;
+    }
+  }
+
+  &:not(:first-child) {
+    display: none;
+  }
+
+  p {
+    @include font-size (13px, 20px, 400);
+    color: $basic-black-60;
+    width: 248px;
+    padding-top: 43px;
+  }
+
+  @include above($desktop-width) {
+    flex: 0 1 auto;
+
+    &:not(:first-child) {
+      display: block;
+    }
+  }
+}

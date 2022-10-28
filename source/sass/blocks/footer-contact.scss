@@ -1,0 +1,51 @@
+.footer-contact {
+  @include above($desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 250px);
+    gap: 0 56px;
+  }
+}
+
+.footer-contact__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  svg {
+    color: $basic-white;
+
+    &:hover {
+      color: $second-blue;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+  @include above($desktop-width) {
+    display: block;
+  }
+}
+
+.footer-contact__phone {
+  @include font-size(20px, 24px, 600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $basic-white;
+  margin-bottom: 20px;
+
+  span {
+    @include font-size(11px, 17px, 400);
+  }
+
+  &:hover {
+    color: $second-blue;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}

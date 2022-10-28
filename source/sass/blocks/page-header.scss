@@ -1,0 +1,110 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__wrapper {
+  padding-top: 1em;
+}
+
+.page-header__wrap {
+  position: relative;
+  display: flex;
+}
+
+.page-header__logo-sub {
+  display: none;
+
+  @include above ($tablet-width) {
+    display: block;
+    @include font-size (11px, 17px, 400);
+    color: $basic-grey;
+    margin: 0;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 210000;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  background-color: $transparent;
+
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $basic-black;
+    border-radius: 9px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  &--close {
+    span {
+      background-color: $basic-white;
+    }
+
+    span:first-child {
+      top: 6px;
+      transform: rotate(135deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+
+    span:last-child {
+      top: 6px;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &--open {
+    span:first-child {
+      top: 0px;
+    }
+
+    span:nth-child(2) {
+      top: 6px;
+    }
+
+    span:last-child {
+      top: 12px;
+    }
+
+    &--nojs {
+      display: none;
+    }
+
+    @include above ($tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.page-header__logo {
+  flex: 1 1 auto;
+
+  @include above ($tablet-width) {
+    flex: 1 0 auto;
+    padding-right: 24px;
+  }
+
+  @include above ($desktop-width) {
+   width: 200px;
+   height: 32px;
+  }
+}
+
+.page-header__top-nav {
+  @include list-reset;
+}

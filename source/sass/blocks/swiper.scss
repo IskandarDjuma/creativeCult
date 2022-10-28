@@ -1,0 +1,25 @@
+.swiper__dots {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @include above ($desktop-width) {
+    display: none;
+  }
+}
+
+.swiper__dot {
+  width: 6px;
+  height: 6px;
+  background-color: $main-grey;
+  border-radius: 50%;
+
+  &--current {
+    width: 8px;
+    height: 8px;
+    background-color: $accent-color;
+  }
+}
+

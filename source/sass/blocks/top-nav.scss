@@ -1,0 +1,71 @@
+.top-nav {
+  position: fixed;
+  inset: 0;
+  min-height: 42px;
+  z-index: 9999;
+  width: 100%;
+  background-color: $accent-color;
+  overflow-y: hidden;
+
+  @include below($mobile-width-only) {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+    }
+
+    &--nojs {
+      display: block;
+
+      .main-nav__list {
+        display: block;
+      }
+    }
+  }
+
+  @include above($tablet-width) {
+    position: relative;
+    background-color: $basic-white;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.top-nav__item {
+  &--mail {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 17px;
+      height: 20px;
+      background: url("../img/icon/mail-icon.svg") no-repeat;
+      z-index: 999;
+    }
+  }
+
+  @include above($tablet-width) {
+    padding-right: 10px;
+  }
+}
+
+.top-nav__link {
+  @include font-size (14px, 22px, 400);
+  color: $basic-white;
+  border: none;
+  cursor: pointer;
+
+  @include above ($tablet-width) {
+    color: $accent-color;
+
+    &:hover{
+      color: $basic-grey;
+    }
+  }
+}

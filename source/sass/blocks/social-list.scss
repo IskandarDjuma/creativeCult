@@ -1,0 +1,20 @@
+.social-list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.social-list__link {
+  svg {
+    color: $basic-white
+  }
+  svg:hover {
+    color: $second-blue;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}

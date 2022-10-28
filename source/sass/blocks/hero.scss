@@ -1,0 +1,126 @@
+.hero {
+  @include above ($desktop-width) {
+    background-image: linear-gradient(to left, $second-blue 30%, transparent 30%, transparent 100%);
+  }
+}
+
+.hero {
+  margin-bottom: 45px;
+
+  @include above ($desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.hero__list {
+  @include list-reset;
+  position: relative;
+}
+
+.hero__item {
+  background-image: linear-gradient(to bottom, $second-blue 30%, transparent 30%, transparent 100%);
+
+  img {
+    max-width: 100%;
+  }
+
+  @include above($desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, $second-blue 30%, transparent 30%, transparent 100%);
+    padding-bottom: 72px;
+  }
+}
+
+.hero__img {
+  width: 100%;
+  padding-top: 25px;
+  filter: drop-shadow(4px 8px 24px rgba(0, 0, 0, 0.2)) drop-shadow(16px 28px 64px rgba(0, 0, 0, 0.16));
+
+  @include above($desktop-width) {
+    padding-top: 70px;
+  }
+}
+
+.hero__headline {
+  @include font-size(23px, 25px, 600);
+  position: relative;
+  color: $accent-color;
+  padding-top: 50px;
+  margin: 0;
+  margin-bottom: 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 126px;
+    height: 24px;
+    background-image: url("../img/icon/hero-icons.svg");
+    background-repeat: no-repeat;
+    background-size: 126px 24px;
+  }
+
+  @include above ($desktop-width) {
+    @include font-size(33px, 38px, 600);
+    padding-top: 115px;
+
+    &::before {
+      width: 208px;
+      height: 40px;
+      background-size: 208px 40px;
+      top: 60px;
+    }
+  }
+}
+
+.hero__subtitle {
+  @include font-size(15px, 20px, 400);
+  color: $seconary-text-color;
+  margin: 0;
+  margin-bottom: 35px;
+
+  @include above ($desktop-width) {
+    @include font-size(18px, 29px,400);
+  }
+}
+
+.hero__btn {
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  padding: 12px 40px;
+  transition: background-color 0.5s ease-in-out,
+  color 0.5s ease-in-out;
+  margin-bottom: 24px;
+
+  &:hover {
+    color: $basic-white;
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  @include above ($desktop-width) {
+    width: 42%;
+  }
+}
+
+
+.hero__swiper-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__info {
+  @include above($desktop-width) {
+    order: -1;
+    width: 486px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

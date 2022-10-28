@@ -1,0 +1,42 @@
+.main-nav__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  overflow-x: scroll;
+  padding: 1.5em 0;
+
+  @include above ($desktop-width) {
+    gap: 50px;
+    padding: 2em 0;
+  }
+
+.main-nav__item {
+  flex: 1 0 auto;
+
+  @include above($tablet-width) {
+    flex: 0 1 auto;
+  }
+}
+}
+
+.main-nav__link {
+  color: $primary-text-color;
+  padding: 8px 12px;
+  background-color: $basic-grey70;
+  transition: background-color 0.5s ease-in-out, color 0.5 ease-in;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $basic-white;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @include above($desktop-width) {
+    background-color: $basic-white;
+  }
+}
+

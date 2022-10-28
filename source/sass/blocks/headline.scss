@@ -1,0 +1,7 @@
+.headline {
+  @include font-size(27px, 30px, 600);
+
+  @include above($desktop-width) {
+    @include font-size(29px, 33px, 600);
+  }
+}
