@@ -9,6 +9,7 @@
   @include above ($desktop-width) {
     gap: 50px;
     padding: 2em 0;
+    overflow: hidden;
   }
 
 .main-nav__item {
