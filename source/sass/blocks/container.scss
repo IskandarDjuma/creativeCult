@@ -10,6 +10,7 @@
 
   @include above($desktop-width) {
     min-width: 1280px;
+    max-width: 1440px;
     padding: 0 120px;
   }
 }

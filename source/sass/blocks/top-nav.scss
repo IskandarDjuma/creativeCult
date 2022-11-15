@@ -13,15 +13,43 @@
     }
 
     &--opened {
-      display: block;
+      position: absolute;
+      top: -50%;
+      right: 0;
+      left: 70px;
+      z-index: 10;
+      min-height: 30vh;
+      background-color: $main-grey;
+
+      .top-nav__item--mail {
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .top-nav__item {
+        a,
+        button {
+          position: relative;
+          display: block;
+          padding: 12px 21px;
+          padding-bottom: 13px;
+          font-size: 18px;
+          line-height: 24px;
+          color: #ffffff;
+          text-transform: uppercase;
+          text-decoration: none;
+          background-color: $accent-color;
+          border-top: 1px solid $basic-dark-blue-9;
+          border-bottom: 1px solid $basic-dark-blue-9;
+        }
+      }
     }
 
     &--nojs {
       display: block;
-
-      .main-nav__list {
-        display: block;
-      }
     }
   }
 

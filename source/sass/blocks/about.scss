@@ -1,8 +1,5 @@
 .about {
   margin-bottom: 52px;
-}
-
-.about__wrap {
   background-color: $accent-color;
 }
 
@@ -87,10 +84,6 @@
   @include above ($desktop-width) {
     width: 30%;
 
-    &--rhomb::before {
-      left: 0;
-    }
-
     &--heart::before {
       left: 70px;
     }
@@ -132,10 +125,12 @@
 .about__wrapper {
   img {
     width: 100%;
+    display: flex;
   }
 
   @include above ($desktop-width) {
     display: flex;
+    justify-content: center;
 
     img {
       width: 720px;
@@ -146,6 +141,12 @@
 .about__more {
   background-color: $light-blue;
   padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+
 
   h3 {
     @include font-size(12px, 16px, 600);
@@ -165,6 +166,7 @@
   p {
     margin: 0;
     margin-bottom: 47px;
+    text-align: center;
   }
 
   a {
@@ -188,6 +190,7 @@
     padding-top: 110px;
     padding-left: 80px;
     min-width: auto;
+    align-items: flex-start;
 
     h2 {
       width: 55%;
@@ -195,6 +198,7 @@
 
     p {
       width: 85%;
+      text-align: start;
     }
   }
 }

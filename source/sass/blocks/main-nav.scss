@@ -7,18 +7,13 @@
   padding: 1.5em 0;
 
   @include above ($desktop-width) {
-    gap: 50px;
     padding: 2em 0;
     overflow: hidden;
   }
 
 .main-nav__item {
   flex: 1 0 auto;
-
-  @include above($tablet-width) {
-    flex: 0 1 auto;
   }
-}
 }
 
 .main-nav__link {
